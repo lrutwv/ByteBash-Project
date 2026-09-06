@@ -1,0 +1,706 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&family=Press+Start+2P&family=Silkscreen:wght@400;700&family=Tiny5&family=VT323&display=swap');
+
+
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0B0B16;
+    color: #F5F5F5;
+    font-family: 'VT323', monospace;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    background-color: #0B0B16;
+    padding: 20px 60px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #B7FF3C;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+
+    text-shadow:
+        0 0 10px #B7FF3C,
+        0 0 20px #B7FF3C,
+        0 0 25px #B7FF3C;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #F5F5F5;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    color: #A855F7;
+
+    text-shadow:
+        0 0 10px #A855F7,
+        0 0 20px #A855F7,
+        0 0 30px #A855F7;
+}
+
+
+/* =========================
+   OUR GAMES
+========================= */
+
+.our-games {
+    padding: 90px 60px 120px;
+    text-align: center;
+    background-image: url('../public/images/sbf-3-removebg-preview.png');
+    background-size: 12px;
+    position: relative;
+}
+
+.our-games::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+
+    background: linear-gradient(
+        to bottom,
+        #0B0B16 0%,
+        rgba(11, 11, 22, 0.8) 30%,
+        rgba(11, 11, 22, 0) 100%
+    );
+
+    pointer-events: none;
+    z-index: 1;
+}
+
+.our-games::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+
+    background: linear-gradient(
+        to top,
+        #0B0B16 0%,
+        rgba(11, 11, 22, 0.8) 30%,
+        rgba(11, 11, 22, 0) 100%
+    );
+
+    pointer-events: none;
+    z-index: 1;
+}
+
+.section-label {
+    color: #A855F7;
+    font-family: 'Tiny5', sans-serif;
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-shadow:
+        0 0 12px rgba(168, 85, 247, 0.5);
+}
+
+.our-games h1 {
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 40px;
+    color: #F5F5F5;
+    margin-bottom: 20px;
+
+    text-shadow:
+        0 0 10px rgba(168, 85, 247, 0.35),
+        0 0 25px rgba(34, 211, 238, 0.18);
+}
+
+.games-intro {
+    color: #9CA3AF;
+    font-size: 20px;
+    margin-bottom: 60px;
+
+    text-shadow:
+        0 0 10px rgba(168, 85, 247, 0.15),
+        0 0 25px rgba(34, 211, 238, 0.08);
+}
+
+.games-preview-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 30px;
+
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.game-preview {
+    width: 31%;
+    text-decoration: none;
+    color: #F5F5F5;
+    text-align: left;
+
+    transition: 0.25s;
+}
+
+/* THE ZIG-ZAG EFFECT */
+
+.game-preview-raised {
+    transform: translateY(-35px);
+}
+
+.preview-image {
+    height: 230px;
+    overflow: hidden;
+    background-color: #252538;
+    margin-bottom: 15px;
+
+    border: 2px solid transparent;
+}
+
+.preview-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.game-preview h2 {
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 25px;
+    margin-bottom: 5px;
+
+     text-shadow:
+        0 0 10px rgba(168, 85, 247, 0.35),
+        0 0 25px rgba(34, 211, 238, 0.18);
+}
+
+.game-preview p {
+    color: #9CA3AF;
+    font-size: 18px;
+
+    text-shadow:
+        0 0 10px rgba(168, 85, 247, 0.15),
+        0 0 25px rgba(34, 211, 238, 0.08);
+}
+
+.game-preview:hover {
+    transform: translateY(-8px);
+}
+
+.game-preview-raised:hover {
+    transform: translateY(-43px);
+}
+
+.game-preview:hover .preview-image {
+    border-color: #A855F7;
+
+    box-shadow:
+        0 0 10px rgba(168, 85, 247, 0.6),
+        0 0 25px rgba(168, 85, 247, 0.3);
+}
+
+
+/* =========================
+   ALL GAME SHOWCASES
+========================= */
+
+.game-showcase {
+    min-height: 900px;
+    padding: 100px 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.game-top {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+
+    max-width: 1100px;
+    margin: 0 auto 70px;
+}
+
+.game-top-reverse {
+    flex-direction: row;
+}
+
+.game-art {
+    width: 50%;
+}
+
+.game-art img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+}
+
+.game-info {
+    width: 50%;
+}
+
+.game-number {
+    font-family: 'Tiny5', sans-serif;
+    font-size: 18px;
+    margin-bottom: 18px;
+}
+
+.game-info h2 {
+    font-size: 38px;
+    margin-bottom: 25px;
+}
+
+.game-story {
+    font-size: 22px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.game-meta {
+    font-family: 'Tiny5', sans-serif;
+    font-size: 16px;
+}
+
+
+/* =========================
+   GAME 1 WORLD
+   PURPLE + SILKSCREEN
+========================= */
+
+.game-one {
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(168, 85, 247, 0.22),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #100b20,
+            #0B0B16 60%
+        );
+}
+
+.game-one .game-number {
+    color: #A855F7;
+}
+
+.game-one .game-info h2 {
+    font-family: 'Silkscreen', sans-serif;
+    color: #F5F5F5;
+
+    text-shadow:
+        0 0 12px rgba(168, 85, 247, 0.5);
+}
+
+.game-one .game-art img {
+    border: 3px solid #A855F7;
+
+    box-shadow:
+        0 0 15px rgba(168, 85, 247, 0.5),
+        0 0 40px rgba(168, 85, 247, 0.2);
+}
+
+
+/* =========================
+   GAME 2 WORLD
+   CYAN + PIXELIFY
+========================= */
+
+.game-two {
+    background:
+        linear-gradient(
+            rgba(34, 211, 238, 0.04) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(34, 211, 238, 0.04) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            135deg,
+            #071820,
+            #0B0B16 60%
+        );
+
+    background-size:
+        35px 35px,
+        35px 35px,
+        100% 100%;
+}
+
+.game-two .game-number {
+    color: #22D3EE;
+}
+
+.game-two .game-info h2 {
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 48px;
+    color: #22D3EE;
+
+    text-shadow:
+        0 0 12px rgba(34, 211, 238, 0.5);
+}
+
+.game-two .game-art img {
+    border: 3px solid #22D3EE;
+
+    box-shadow:
+        0 0 15px rgba(34, 211, 238, 0.5),
+        0 0 40px rgba(34, 211, 238, 0.2);
+}
+
+
+/* =========================
+   GAME 3 WORLD
+   LIME + PRESS START
+========================= */
+
+.game-three {
+    background:
+        radial-gradient(
+            circle at 80% 25%,
+            rgba(183, 255, 60, 0.12),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #1a1024,
+            #0B0B16 65%
+        );
+}
+
+.game-three .game-number {
+    color: #B7FF3C;
+}
+
+.game-three .game-info h2 {
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 25px;
+    line-height: 1.5;
+    color: #B7FF3C;
+
+    text-shadow:
+        0 0 12px rgba(183, 255, 60, 0.4);
+}
+
+.game-three .game-art img {
+    border: 3px solid #B7FF3C;
+
+    box-shadow:
+        0 0 15px rgba(183, 255, 60, 0.45),
+        0 0 40px rgba(168, 85, 247, 0.2);
+}
+
+
+/* =========================
+   VIDEO
+========================= */
+
+.game-video {
+    max-width: 900px;
+    margin: 0 auto 70px;
+}
+
+.video-label,
+.screenshots-label {
+    font-family: 'Tiny5', sans-serif;
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #9CA3AF;
+}
+
+.game-video iframe {
+    width: 100%;
+    height: 500px;
+    border: 2px solid #252538;
+}
+
+
+/* GAME-SPECIFIC VIDEO ACCENTS */
+
+.game-one .game-video iframe {
+    border-color: #A855F7;
+}
+
+.game-two .game-video iframe {
+    border-color: #22D3EE;
+}
+
+.game-three .game-video iframe {
+    border-color: #B7FF3C;
+}
+
+
+/* =========================
+   SCREENSHOTS
+========================= */
+
+.screenshots {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.screenshot-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.screenshot-grid img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+
+    border: 2px solid #252538;
+}
+
+
+/* DIFFERENT SCREENSHOT ACCENTS */
+
+.game-one .screenshot-grid img:hover {
+    border-color: #A855F7;
+
+    box-shadow:
+        0 0 15px rgba(168, 85, 247, 0.5);
+}
+
+.game-two .screenshot-grid img:hover {
+    border-color: #22D3EE;
+
+    box-shadow:
+        0 0 15px rgba(34, 211, 238, 0.5);
+}
+
+.game-three .screenshot-grid img:hover {
+    border-color: #B7FF3C;
+
+    box-shadow:
+        0 0 15px rgba(183, 255, 60, 0.5);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background-color: #080811;
+    padding: 50px 60px 25px;
+}
+
+.footer-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 100px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.footer-brand h3 {
+    color: #B7FF3C;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.footer-brand p {
+    color: #9CA3AF;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-links h4 {
+    color: #F5F5F5;
+    margin-bottom: 5px;
+}
+
+.footer-links a {
+    color: #9CA3AF;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #A855F7;
+
+    text-shadow:
+        0 0 10px #A855F7,
+        0 0 20px #A855F7,
+        0 0 30px #A855F7;
+}
+
+.back-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 45px;
+    height: 45px;
+    font-family: 'Tiny5', sans-serif;
+
+    background-color: #252538;
+    color: #B7FF3C;
+
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+
+    
+
+    transform: translateY(-40px);
+
+    transition: 0.2s;
+}
+
+.back-to-top:hover {
+    background-color: #B7FF3C;
+    color: #A855F7;
+    box-shadow: 0 0 10px #B7FF3C, 0 0 20px #A855F7, 0 0 30px #A855F7;
+}
+
+.footer-bottom {
+    border-top: 1px solid #252538;
+    margin-top: 40px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #9CA3AF;
+    font-size: 14px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    header {
+        padding: 20px 30px;
+    }
+
+    .our-games,
+    .game-showcase {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .games-preview-row {
+        gap: 20px;
+    }
+
+    .game-top,
+    .game-top-reverse {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .game-art,
+    .game-info {
+        width: 100%;
+    }
+
+    .game-art img {
+        height: 350px;
+    }
+
+    .game-video iframe {
+        height: 400px;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .our-games h1 {
+        font-size: 28px;
+    }
+
+    .games-preview-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .game-preview {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .game-preview-raised {
+        transform: none;
+    }
+
+    .game-preview-raised:hover {
+        transform: translateY(-8px);
+    }
+
+    .game-info h2,
+    .game-two .game-info h2 {
+        font-size: 32px;
+    }
+
+    .game-three .game-info h2 {
+        font-size: 20px;
+    }
+
+    .game-video iframe {
+        height: 250px;
+    }
+
+    .screenshot-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+}

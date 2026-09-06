@@ -1,0 +1,532 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&family=Press+Start+2P&family=Silkscreen:wght@400;700&family=Tiny5&family=VT323&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #0B0B16;
+    color: #F5F5F5;
+    font-family: 'VT323', monospace;
+}
+header {
+    background-color: #0B0B16;
+    padding: 20px 60px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #B7FF3C;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 0 0 10px #B7FF3C,
+                 0 0 20px #B7FF3C, 
+                 0 0 25px #B7FF3C;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #F5F5F5;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    color: #A855F7;
+    text-shadow: 0 0 10px #A855F7, 0 0 20px #A855F7, 0 0 30px #A855F7;
+}
+
+.hero {
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    padding-left: 60px;
+    width: 60%;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-label {
+    color: #A855F7;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-family: 'Tiny5', sans-serif;
+}
+
+.hero h1 {
+    font-family: 'Press Start 2P', sans-serif;
+    word-spacing: -25px;
+    font-size: 55.3px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    max-width: 750px;
+    color:#F5F5F5;
+}
+
+.hero-description {
+    color: #9CA3AF;
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 450px;
+    margin-bottom: 30px;
+}
+
+.hero-button {
+    display: inline-block;
+    background-color: #B7FF3C;
+    color: #0B0B16;
+    padding: 14px 22px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero-game {
+    width: 100%;
+    height: 650px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.hero-game img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to right,
+        #0B0B16 0%,
+        rgba(11, 11, 22, 0.95) 25%,
+        rgba(11, 11, 22, 0.45) 50%,
+        rgba(11, 11, 22, 0) 75%
+    );
+    z-index: 1;
+    pointer-events: none;
+}
+
+.welcome {
+    min-height: 450px;
+    padding: 80px 60px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 20% 50%,
+            rgba(168, 85, 247, 0.10),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 80% 50%,
+            rgba(183, 255, 60, 0.07),
+            transparent 30%
+        ),
+        #0B0B16;
+}
+
+
+.welcome-character {
+    width: 45%;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-character img {
+    max-width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+}
+
+.welcome-content {
+    width: 55%;
+    text-align: right;
+    padding-left: 200px;
+    transform: translateX(-70px);
+}
+
+.welcome-content h2 {
+    color: #F5F5F5;
+    font-size: 45px;
+    line-height: 1.2;
+    word-spacing: -28px;
+    
+    margin-bottom: 20px;
+    font-family: 'Press Start 2P', sans-serif;
+}
+
+.welcome-content p {
+    color: #9CA3AF;
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 500px;
+    margin-bottom: 25px;
+}
+
+.welcome-button {
+    display: inline-block;
+    background-color: #B7FF3C;
+    color: #0B0B16;
+    padding: 14px 22px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.devlog {
+    min-height: 600px;
+    padding: 80px 60px;
+    text-align: center;
+    position: relative;
+    overflow: visible;
+
+    background:
+        radial-gradient(
+            circle at 20% 30%,
+            rgba(168, 85, 247, 0.08),
+            transparent 30%
+        ),
+        linear-gradient(
+            rgba(168, 85, 247, 0.035) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(183, 255, 60, 0.035) 1px,
+            transparent 1px
+        ),
+        #0B0B16;
+
+    background-size:
+        auto,
+        45px 45px,
+        45px 45px,
+        auto;
+}
+
+
+.devlog h2 {
+    color: #F5F5F5;
+    font-size: 36px;
+    margin-bottom: 12px;
+    font-family: 'Press Start 2P', sans-serif;
+}
+
+.devlog-intro {
+    color: #9CA3AF;
+    font-size: 18px;
+    margin-bottom: 45px;
+}
+
+.devlog-grid {
+    display: flex;
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto 40px;
+}
+
+.devlog-card {
+    flex: 1;
+    text-align: left;
+    font-family: 'Pixelify Sans', sans-serif;
+    padding: 15px;
+    background-color: rgba(37, 37, 56, 0.45);
+    border: 1px solid #252538;
+    transition: 0.25s;
+}
+.devlog-card:hover {
+    border-color: #A855F7;
+    transform: translateY(-5px);
+    box-shadow:
+        0 0 10px rgba(168, 85, 247, 0.25),
+        0 0 25px rgba(168, 85, 247, 0.10);
+    cursor: pointer;
+}
+.devlog-image {
+    height: 200px;
+    background-color: #252538;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9CA3AF;
+    margin-bottom: 18px;
+}
+
+.devlog-number {
+    color: #A855F7;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: 'Tiny5', sans-serif;
+}
+
+.devlog-card h3 {
+    color: #F5F5F5;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.devlog-button {
+    display: inline-block;
+    background-color: #B7FF3C;
+    color: #0B0B16;
+    padding: 14px 22px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.devlog-next {
+    display: block;
+    width: fit-content;
+    margin: 0 40px 20px auto;
+
+    color: #B7FF3C;
+    text-decoration: none;
+    font-family: 'VT323', monospace;
+    font-size: 35px;
+
+    transition: 0.2s;
+}
+
+.devlog-next:hover {
+    color: #A855F7;
+    transform: translateX(1px);
+    text-shadow:
+        0 0 8px #A855F7,
+        0 0 18px #A855F7;
+}
+
+.community {
+    min-height: 450px;
+    padding: 80px 60px;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 20% 30%,
+            rgba(168, 85, 247, 0.10),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 80% 70%,
+            rgba(183, 255, 60, 0.08),
+            transparent 30%
+        ),
+        linear-gradient(
+            rgba(168, 85, 247, 0.03) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(183, 255, 60, 0.03) 1px,
+            transparent 1px
+        ),
+        #0B0B16;
+
+    background-size:
+        auto,
+        auto,
+        45px 45px,
+        45px 45px,
+        auto;
+}
+
+.community h2 {
+    color: #F5F5F5;
+    font-size: 36px;
+    margin-bottom: 12px;
+    font-family: 'Press Start 2P', sans-serif;
+}
+
+.community-intro {
+    color: #9CA3AF;
+    font-size: 18px;
+    margin-bottom: 45px;
+}
+
+.community-content {
+    max-width: 600px;
+    margin: 0;
+}
+
+.community-content h3 {
+    color: #F5F5F5;
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-family: 'Pixelify Sans', sans-serif;
+}
+
+.community-content p {
+    color: #9CA3AF;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.community-button {
+    display: inline-block;
+    background-color: #A855F7;
+    color: #F5F5F5;
+    padding: 14px 22px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #080811;
+    padding: 50px 60px 25px;
+}
+
+.footer-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 100px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.footer-brand h3 {
+    color: #B7FF3C;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.footer-brand p {
+    color: #9CA3AF;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-links h4 {
+    color: #F5F5F5;
+    margin-bottom: 5px;
+}
+
+.footer-links a {
+    color: #9CA3AF;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+     color: #A855F7;
+    text-shadow: 0 0 10px #A855F7, 0 0 20px #A855F7, 0 0 30px #A855F7;
+}
+
+.footer-bottom {
+    border-top: 1px solid #252538;
+    margin-top: 40px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #9CA3AF;
+    font-size: 14px;
+}
+
+.back-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 45px;
+    height: 45px;
+    font-family: 'Tiny5', sans-serif;
+
+    background-color: #252538;
+    color: #B7FF3C;
+
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+
+    
+
+    transform: translateY(-40px);
+
+    transition: 0.2s;
+}
+
+.back-to-top:hover {
+    background-color: #B7FF3C;
+    color: #A855F7;
+    box-shadow: 0 0 10px #B7FF3C, 0 0 20px #A855F7, 0 0 30px #A855F7;
+}
+
+.hero-button,
+.welcome-button,
+.devlog-button,
+.community-button {
+    clip-path: polygon(
+        6px 0,
+        calc(100% - 6px) 0,
+        calc(100% - 6px) 3px,
+        calc(100% - 3px) 3px,
+        calc(100% - 3px) 6px,
+        100% 6px,
+        100% calc(100% - 6px),
+        calc(100% - 3px) calc(100% - 6px),
+        calc(100% - 3px) calc(100% - 3px),
+        calc(100% - 6px) calc(100% - 3px),
+        calc(100% - 6px) 100%,
+        6px 100%,
+        6px calc(100% - 3px),
+        3px calc(100% - 3px),
+        3px calc(100% - 6px),
+        0 calc(100% - 6px),
+        0 6px,
+        3px 6px,
+        3px 3px,
+        6px 3px
+    );
+
+}
+
+.hero-button:hover,
+.welcome-button:hover,
+.devlog-button:hover {
+    clip-path: none;
+    border-radius: 12px;
+    box-shadow:
+        0 0 8px #B7FF3C,
+        0 0 18px #A855F7,
+        0 0 30px #B7FF3C;
+}
+
+.community-button:hover {
+    clip-path: none;
+    border-radius: 12px;
+    box-shadow:
+        0 0 8px #A855F7,
+        0 0 18px #B7FF3C,
+        0 0 30px #A855F7;
+}
