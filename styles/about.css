@@ -250,6 +250,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 
     color: #9CA3AF;
     border-color: #A855F7;
@@ -281,6 +282,16 @@ nav {
     );
 
     transition: 0.25s;
+}
+
+.story-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    display: block;
 }
 
 .story-content {
@@ -408,6 +419,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 
     color: #9CA3AF;
 
@@ -435,6 +447,16 @@ nav {
     );
 
     transition: 0.25s;
+}
+
+.dev-avatar img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    display: block;
 }
 
 .dev-card:nth-child(1) .dev-avatar {
