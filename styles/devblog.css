@@ -199,17 +199,27 @@ section h2{
     margin-bottom: 18px;
 }
 
-.blog-thumbnail {
+.blog-image {
     width: 100%;
-    height: 240px;
-    background-color: #33334A;
+    height: 220px;
+    overflow: hidden;
+    background-color: #252538;
+
     display: flex;
-    align-items: center;
     justify-content: center;
-    color: #9CA3AF;
+    align-items: center;
+
     margin-bottom: 25px;
 }
 
+.blog-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+    display: block;
+}
 .blog-preview {
     color: #9CA3AF;
     font-size: 16px;
