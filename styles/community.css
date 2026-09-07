@@ -170,30 +170,6 @@ nav {
 }
 
 
-/* HERO CHARACTER */
-
-.community-hero-art {
-    position: absolute;
-    right: 8%;
-    bottom: 35px;
-
-    width: 220px;
-    z-index: 2;
-
-    pointer-events: none;
-}
-
-.community-hero-art img {
-    width: 100%;
-    height: auto;
-    display: block;
-
-    filter:
-        drop-shadow(0 0 10px rgba(34, 211, 238, 0.25))
-        drop-shadow(0 0 20px rgba(168, 85, 247, 0.15));
-}
-
-
 /* PIXEL DECORATIONS */
 
 .pixel {

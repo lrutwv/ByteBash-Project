@@ -238,13 +238,16 @@ nav {
     left: 25px;
     bottom: 0;
     z-index: 3;
+    
 }
 
 .devlog-character img {
     width: 100%;
     height: auto;
-    display: block;
+    display: block;   
 }
+
+
 
 .devlog h2 {
     color: #F5F5F5;
