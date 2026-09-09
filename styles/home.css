@@ -560,3 +560,291 @@ footer {
         0 0 18px #B7FF3C,
         0 0 30px #A855F7;
 }
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+    header {
+        padding: 20px 30px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 600px;
+    }
+
+    .hero-content {
+        padding-left: 30px;
+        width: 65%;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+        word-spacing: -18px;
+    }
+
+    .hero-game {
+        height: 600px;
+    }
+
+
+    /* WELCOME */
+
+    .welcome {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .welcome-content {
+        padding-left: 60px;
+        transform: translateX(-30px);
+    }
+
+    .welcome-content h2 {
+        font-size: 38px;
+        word-spacing: -20px;
+    }
+
+
+    /* DEVLOG */
+
+    .devlog {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .devlog-grid {
+        gap: 20px;
+    }
+
+    .devlog-image {
+        height: 180px;
+    }
+
+    .devlog-card h3 {
+        font-size: 17px;
+    }
+
+
+    /* COMMUNITY */
+
+    .community {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+
+    /* FOOTER */
+
+    .footer-content {
+        gap: 60px;
+    }
+
+}
+
+
+/* PHONE */
+
+@media (max-width: 650px) {
+
+    /* HEADER */
+
+    header {
+        padding: 20px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 650px;
+        padding: 70px 20px;
+
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .hero-content {
+        width: 100%;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .hero-label {
+        font-size: 13px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+        line-height: 1.4;
+        word-spacing: -10px;
+    }
+
+    .hero-description {
+        font-size: 18px;
+        line-height: 1.5;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-game {
+        width: 100%;
+        height: 100%;
+        opacity: 0.45;
+    }
+
+
+    /* WELCOME */
+
+    .welcome {
+        min-height: auto;
+        padding: 70px 20px;
+
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .welcome-character {
+        width: 100%;
+        height: 230px;
+    }
+
+    .welcome-character img {
+        max-height: 230px;
+    }
+
+    .welcome-content {
+        width: 100%;
+        padding-left: 0;
+        text-align: center;
+        transform: none;
+    }
+
+    .welcome-content h2 {
+        font-size: 30px;
+        line-height: 1.4;
+        word-spacing: -15px;
+    }
+
+    .welcome-content p {
+        font-size: 18px;
+        line-height: 1.5;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    /* DEVLOG */
+
+    .devlog {
+        min-height: auto;
+        padding: 70px 20px 120px;
+    }
+
+    .devlog h2 {
+        font-size: 28px;
+        line-height: 1.4;
+    }
+
+    .devlog-intro {
+        font-size: 18px;
+        margin-bottom: 40px;
+    }
+
+    .devlog-grid {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .devlog-card {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .devlog-image {
+        height: 180px;
+    }
+
+    .devlog-card h3 {
+        font-size: 18px;
+        line-height: 1.4;
+    }
+
+    .devlog-next {
+        margin-right: 10px;
+    }
+
+    .devlog-character {
+        left: 10px;
+        width: 390px;
+    }
+
+
+    /* COMMUNITY */
+
+    .community {
+        min-height: auto;
+        padding: 70px 20px;
+
+        text-align: center;
+    }
+
+    .community h2 {
+        font-size: 28px;
+        line-height: 1.4;
+    }
+
+    .community-intro {
+        font-size: 18px;
+        margin-bottom: 40px;
+    }
+
+    .community-content {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .community-content h3 {
+        font-size: 22px;
+        line-height: 1.4;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        padding: 40px 20px 25px;
+    }
+
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 30px;
+    }
+
+}
