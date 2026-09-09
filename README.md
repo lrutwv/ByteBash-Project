@@ -1,4 +1,4 @@
-# BYTEBASH 🎮
+# BYTEBASH 
 
 A small indie game studio website created as a collaborative practice project.
 
@@ -8,11 +8,11 @@ ByteBash is a fictional indie game studio website designed around a fun, colorfu
 
 The website includes:
 
-* 🏠 Home
-* 🎮 Games
-* 👾 About
-* 📖 Developer Blog
-* 💬 Community
+*  Home
+*  Games
+*  About
+*  Developer Blog
+*  Community
 
 The design was first created in **Figma** and then developed using **HTML and CSS**.
 
@@ -75,6 +75,11 @@ The website uses a dark background with neon purple, lime, and cyan accents to c
 
 ## Project Status
 
-**Completed for practice.** 🚀
+**Completed for practice.** 
 
 This project was created to improve our Figma, HTML, CSS, responsive design, and collaboration skills.
+
+## Authors & Collaboration
+
+- @lrutwv
+- @ruthcodes-alt
