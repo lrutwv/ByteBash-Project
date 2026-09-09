@@ -81,5 +81,5 @@ This project was created to improve our Figma, HTML, CSS, responsive design, and
 
 ## Authors & Collaboration
 
-- @lrutwv
-- @ruthcodes-alt
+- [@lrutwv](https://github.com/lrutwv)
+- [@ruthcodes-alt](https://github.com/ruthcodes-alt)
